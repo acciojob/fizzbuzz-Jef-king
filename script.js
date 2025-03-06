@@ -1,15 +1,17 @@
-//your JS code here. If required.
-let s='';
-for(int i=1;i<21;i++){
-	let x=(i%3)?true:false,y=(i%5)?true;false;
-	if(x && y){
-		s+="FizzBuzz";
+let fizzBuzz=(n)=>{
+let s="";
+for(let i=1;i<=n;i++){
+	let x=(i%3==0)?true:false;
+	let y=(i%5==0)?true:false;
+	if(x&&y){
+		s+="FizzBuzz\n";
 	}else if(x){
-		s+="Fizz";
-	else if(y){
-		s+="Buzz";
+		s+="Fizz\n";
+	}else if(y){
+		s+="Buzz\n";
 	}else{
-		s+=i;
+		s+=i+"\n";
 	}
+} return s;
 }
-alert(s);
+alert(fizzBuzz(20));
